@@ -36,7 +36,7 @@ export default function BannerSection() {
   }, []);
 
   return (
-    <section className="w-full bg-[hsl(var(--background))] px-0 py-14 relative overflow-hidden">
+    <section className="w-full bg-[hsl(var(--background))] px-0 py-1 relative overflow-hidden">
       {/* Radial Gradient Overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute left-[-15%] top-[-15%] w-[60vw] h-[60vw] bg-gradient-radial from-orange-100 via-white/60 to-transparent opacity-60" />
