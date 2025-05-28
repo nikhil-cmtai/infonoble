@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Menu} from "lucide-react";
+import MobileMenu from "./mobile-menu";
 
 const whyMenu = [
   {
@@ -103,29 +104,28 @@ const navItems = [
   },
   {
     label: "Contact Us",
-    submenu: null,
   },
 ];
 
 export default function Header() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[92vw] max-w-7xl rounded-full bg-white/70 backdrop-blur-xl shadow-lg flex items-center px-10 py-3 border border-[hsl(var(--border))] min-h-[64px] transition-all">
+    <>
+    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[92vw] max-w-7xl rounded-full bg-white/70 backdrop-blur-xl shadow-lg flex items-center px-4 md:px-10 py-3 border border-[hsl(var(--border))] min-h-[64px] transition-all">
       <div className="flex items-center w-full">
         {/* Logo */}
-        <div className="flex-shrink-0 mr-8">
+        <div className="flex-shrink-0 mr-4 md:mr-8">
           <Link href="/">
-          <span className="text-2xl font-bold text-[hsl(var(--foreground))]">
-            INFO 
-            <span className="text-2xl font-bold text-orange-500">
-              NOBLE
+            <span className="text-2xl font-bold text-[hsl(var(--foreground))]">
+              INFO
+              <span className="text-2xl font-bold text-orange-500">NOBLE</span>
             </span>
-          </span>
           </Link>
         </div>
-        {/* Nav Links */}
-        <nav className="flex-1 flex justify-center space-x-8 relative">
+        {/* Desktop Nav Links */}
+        <nav className="flex-1 justify-center space-x-8 relative hidden md:flex">
           {navItems.map((item, idx) => (
             <div
               key={item.label}
@@ -223,13 +223,24 @@ export default function Header() {
             </div>
           ))}
         </nav>
-        {/* Request a Demo Button */}
-        <div className="flex-shrink-0 ml-8">
+        {/* Hamburger Menu Icon for Mobile */}
+        <button
+          className="md:hidden ml-auto flex items-center justify-center p-2 rounded-full hover:bg-[hsl(var(--muted))] focus:outline-none"
+          onClick={() => setMobileMenuOpen(true)}
+          aria-label="Open menu"
+        >
+          <Menu className="w-7 h-7 text-[hsl(var(--foreground))]" />
+        </button>
+        {/* Request a Demo Button (desktop only) */}
+        <div className="flex-shrink-0 ml-4 hidden md:block">
           <Link href="#" className="px-6 py-2 rounded-full bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] font-bold shadow hover:scale-105 hover:bg-[hsl(var(--secondary))] transition-all border border-[hsl(var(--border))]">
             Request a Demo
           </Link>
         </div>
       </div>
+      {/* Mobile Menu Overlay (moved to MobileMenu component) */}
     </header>
+          <MobileMenu open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} navItems={navItems} />
+</>
   );
 }
