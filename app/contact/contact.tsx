@@ -12,7 +12,7 @@ export default function Contact() {
         <div className="max-w-3xl mx-auto px-4 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[hsl(var(--foreground))]">Contact Us</h1>
           <p className="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto font-medium">
-            We'd love to hear from you. Reach out and our team will get back to you soon.
+            We&rsquo;d love to hear from you. Reach out and our team will get back to you soon.
           </p>
         </div>
       </section>

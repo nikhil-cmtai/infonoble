@@ -81,7 +81,7 @@ export default function ProductsSection() {
   );
 }
 
-function ProductCard({ product, index }: { product: Product, index: number }) {
+function ProductCard({ product }: { product: Product, index: number }) {
   return (
     <div className="relative group bg-white/60 backdrop-blur-2xl rounded-2xl shadow-2xl p-8 flex flex-col gap-4 border border-[hsl(var(--border))] transition-colors duration-300 hover:text-[hsl(var(--primary))]">
       {/* Accent bar */}
