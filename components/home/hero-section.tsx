@@ -14,7 +14,7 @@ export default function HeroSection() {
         <div className="absolute right-[-15%] bottom-[-15%] w-[60vw] h-[60vw] bg-gradient-radial from-blue-100 via-white/60 to-transparent opacity-60" />
       </div>
       {/* Animated Blobs */}
-      <div className="absolute z-0 top-[-120px] left-[-120px] w-[340px] h-[340px] bg-[hsl(var(--primary))] opacity-30 rounded-full blur-3xl animate-blob1" />
+      <div className="absolute z-0 top-[50px] left-[-120px] w-[340px] h-[340px] bg-[hsl(var(--primary))] opacity-30 rounded-full blur-3xl animate-blob1" />
       <div className="absolute z-0 bottom-[-100px] right-[-100px] w-[300px] h-[300px] bg-[hsl(var(--secondary))] opacity-30 rounded-full blur-3xl animate-blob2" />
       <div className="absolute z-0 top-1/2 left-[60%] w-[220px] h-[220px] bg-orange-300 opacity-20 rounded-full blur-2xl animate-blob3" />
       <div className="absolute z-0 top-[10%] right-[20%] w-[180px] h-[180px] bg-purple-300 opacity-20 rounded-full blur-2xl animate-blob4" />

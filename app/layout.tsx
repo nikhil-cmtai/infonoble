@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/layouts/header";
 import Footer from "@/components/layouts/footer";
 import FloatingButton from "@/components/layouts/floating-button";
-
+import Maintenance from "./maintenance/page";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,11 +25,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const maintenanceMode = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === "true";
+
+  if (maintenanceMode) {
+    return (
+      <html lang="en">
+        <body>
+          <Maintenance />
+        </body>
+      </html>
+    );
+  }
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div aria-hidden="true" className="h-[88px] md:h-[88px]"></div>
         <Header />
         {children}
         <Footer />

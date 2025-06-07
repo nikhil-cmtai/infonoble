@@ -51,7 +51,8 @@ const quickFeatures = [
 ];
 
 const ImproveSection = () => {
-    const [openIdx, setOpenIdx] = useState<number | null>(null);
+    // By default, first item open
+    const [openIdx, setOpenIdx] = useState<number>(0);
     return (
         <section className="w-full py-24 px-6 md:px-16 bg-[hsl(var(--background))] relative overflow-hidden">
             {/* Animated Background Blobs & Gradient */}
@@ -82,7 +83,7 @@ const ImproveSection = () => {
                                 <div
                                     key={i}
                                     className={`flex flex-col bg-[hsl(var(--muted))] rounded-2xl px-6 py-3 shadow-sm transition group cursor-pointer ${isOpen ? 'shadow-md' : ''}`}
-                                    onClick={() => setOpenIdx(isOpen ? null : i)}
+                                    onClick={() => setOpenIdx(isOpen ? -1 : i)}
                                 >
                                     <div className="flex items-center justify-between">
                                         <div className="flex items-center gap-4">
@@ -93,7 +94,7 @@ const ImproveSection = () => {
                                             className={`w-8 h-8 flex items-center justify-center rounded-full bg-pink-100 group-hover:bg-pink-200 transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}
                                             tabIndex={-1}
                                             aria-label={isOpen ? 'Collapse' : 'Expand'}
-                                            onClick={e => { e.stopPropagation(); setOpenIdx(isOpen ? null : i); }}
+                                            onClick={e => { e.stopPropagation(); setOpenIdx(isOpen ? -1 : i); }}
                                         >
                                             <Plus className="w-5 h-5 text-pink-500" />
                                         </button>
