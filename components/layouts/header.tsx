@@ -28,30 +28,25 @@ const whyMenu = [
 
 const productsMenu = [
   {
-    title: "Call Center Software",
+    title: "Noble Dialer",
     desc: "The Leading Cloud Contact Center Software in the Middle East.",
-    href: "#",
-  },
-  {
-    title: "Business Phone System",
-    desc: "A scalable business phone system for every company.",
-    href: "#",
-  },
-  {
-    title: "INFONOBLE AI",
-    desc: "Revolutionize Your Contact Center with INFONOBLE AI.",
-    href: "#",
+    href: "/noble-dialer",
   },
   {
     title: "Omnichannel",
     desc: "Manage all your Voice, WhatsApp conversations seamlessly in one place.",
-    href: "#",
+    href: "/omni-channel",
   },
   {
-    title: "Workflows & Chatbot",
-    desc: "Power your business with intelligent conversations and seamless automation using INFONOBLE Workflows and Chatbots.",
-    href: "#",
+    title: "IP PBX",
+    desc: "A scalable business phone system for every company.",
+    href: "/ip-pbx",
   },
+  {
+    title: "Voice AI",
+    desc: "Power your business with intelligent conversations and seamless automation using INFONOBLE Workflows and Chatbots.",
+    href: "/voice-ai",
+  }
 ];
 
 const solutionsMenu = [
@@ -118,7 +113,7 @@ export default function Header() {
     <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[92vw] max-w-7xl rounded-full bg-white/70 backdrop-blur-xl shadow-lg flex items-center px-4 md:px-10 py-3 border border-[hsl(var(--border))] min-h-[64px] transition-all">
       <div className="flex items-center w-full">
         {/* Logo */}
-        <div className="flex-shrink-0 mr-4 md:mr-8">
+        <div className="flex-shrink-0 mr-4 md:mr-8 cursor-pointer">
           <Link href="/">
             <span className="text-2xl font-bold text-[hsl(var(--foreground))]">
               INFO

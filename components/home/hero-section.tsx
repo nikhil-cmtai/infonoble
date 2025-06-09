@@ -6,7 +6,7 @@ import { Phone, MessageSquare, Mic, Cloud } from 'lucide-react';
 export default function HeroSection() {
   return (
     <section
-      className="w-full min-h-[70vh] bg-[hsl(var(--background))] px-0 py-16 relative overflow-hidden pt-32 md:pt-40"
+      className="w-full min-h-[70vh] bg-[hsl(var(--background))] px-0 py-16 relative overflow-hidden"
     >
       {/* Radial Gradient Overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none">

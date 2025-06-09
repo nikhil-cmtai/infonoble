@@ -1,8 +1,8 @@
-import React from "react";
 import Contact from "./contact";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "Contact",
+export const metadata: Metadata = {
+  title: "Contact | Infonoble",
   description: "Contact page",
 };
 

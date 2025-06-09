@@ -1,9 +1,8 @@
-import React from "react";
 import About from "./about";
+import { Metadata } from "next";
 
-
-export const metadata = {
-  title: "About",
+export const metadata: Metadata = {
+  title: "About | Infonoble",
   description: "About page",
 };
 
