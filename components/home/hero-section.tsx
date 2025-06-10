@@ -92,7 +92,7 @@ export default function HeroSection() {
                 <Cloud className="w-8 h-8 text-purple-400 drop-shadow-lg" />
               </span>
             </div>
-                <Image src="/hero.png" alt="Hero Image" width={1920} height={1080} className="object-contain" />
+                <Image src="/images/home.jpg" alt="Hero Image" width={1920} height={1080} className="object-contain" />
           </div>
         </div>
       </div>

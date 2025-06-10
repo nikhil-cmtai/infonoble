@@ -48,15 +48,15 @@ const VoiceQuality = () => {
       />
 
 
-            {/* Image + Text Section */}
-            <section className="max-w-6xl mx-auto px-4 py-20 flex flex-col md:flex-row items-center gap-12">
+      {/* Image + Text Section */}
+      <section className="max-w-6xl mx-auto px-4 py-20 flex flex-col md:flex-row items-center gap-12">
         <div className="flex-1">
           <Image
-            src="/voice-quality-detail.png"
+            src="/images/2.png"
             alt="Crystal Clear Voice"
-            width={500}
+            width={600}
             height={400}
-            className="rounded-2xl shadow-xl object-cover"
+            className="rounded-2xl object-cover"
           />
         </div>
         <div className="flex-1 flex flex-col gap-6">

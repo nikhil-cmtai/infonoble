@@ -54,7 +54,7 @@ const ImproveSection = () => {
     // By default, first item open
     const [openIdx, setOpenIdx] = useState<number>(0);
     return (
-        <section className="w-full py-24 px-6 md:px-16 bg-[hsl(var(--background))] relative overflow-hidden">
+        <section className="w-full py-20 bg-[hsl(var(--background))] relative overflow-hidden">
             {/* Animated Background Blobs & Gradient */}
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div className="absolute left-[-15%] top-[-10%] w-[40vw] h-[40vw] bg-gradient-radial from-blue-100 via-white/60 to-transparent opacity-50" />
