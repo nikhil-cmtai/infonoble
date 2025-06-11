@@ -1,23 +1,20 @@
 import React from "react";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import HeroSection from "@/components/all/hero-section";
 
 export default function Contact() {
   return (
     <main className="min-h-screen bg-[hsl(var(--background))]">
-      {/* Hero Section */}
-      <section className="relative pt-[100px] pb-20 overflow-hidden">
-        {/* Animated Theme Blobs */}
-        <div className="absolute left-[-20%] top-[-20%] w-[70vw] h-[70vw] bg-gradient-radial from-cyan-100 via-white/60 to-transparent opacity-70 z-0 pointer-events-none" />
-        <div className="absolute right-[-15%] bottom-[-15%] w-[60vw] h-[60vw] bg-gradient-radial from-blue-100 via-white/60 to-transparent opacity-60 z-0 pointer-events-none" />
-        <div className="max-w-3xl mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[hsl(var(--foreground))]">Contact Us</h1>
-          <p className="text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto font-medium">
-            We&rsquo;d love to hear from you. Reach out and our team will get back to you soon.
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="Contact Us"
+        description="We&rsquo;d love to hear from you. Reach out and our team will get back to you soon."
+        imageSrc="/images/contact-hero.jpg"
+      />
       {/* Contact Details & Form */}
       <section className="relative z-10 max-w-7xl mx-auto px-4 pb-24">
+        <div className="max-w-3xl mx-auto px-4 relative z-10 p-12 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[hsl(var(--foreground))]">Get in touch</h1>
+        </div>
         <div className="bg-white/60 backdrop-blur-2xl rounded-3xl shadow-2xl border border-[hsl(var(--border))] p-8 md:p-16 flex flex-col md:flex-row gap-12">
           {/* Left: Details */}
           <div className="flex-1 flex flex-col gap-8 justify-center">

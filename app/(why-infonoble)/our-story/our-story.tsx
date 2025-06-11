@@ -1,43 +1,112 @@
 import React from "react";
 import HeroSection from '@/components/all/hero-section';
-import { Award, Rocket, Star, Users, TrendingUp } from "lucide-react";
 
-const milestones = [
+const journey = [
   {
-    year: "2018",
-    title: "Founded in Dubai",
-    desc: "Infonoble was born from a simple idea: to empower businesses in the GCC with world-class customer engagement. Our founders, driven by passion and a vision for digital transformation, set out to build something truly impactful.",
-    icon: <Star className="w-6 h-6 text-yellow-400" />,
-    extra: "First office opened in Dubai Internet City.",
+    year: "September 2014",
+    desc: "We began our journey on September 26, 2014, with the goal of providing the best CRM solutions to corporates and began trying to identify the region of the problem that needed to be solved in order to give effective solutions.",
+    side: "left"
   },
   {
-    year: "2020",
-    title: "First 100 Clients",
-    desc: "Despite global challenges, our commitment to service and innovation helped us reach our first 100 happy clients. Each partnership taught us, inspired us, and made us stronger.",
-    icon: <Award className="w-6 h-6 text-cyan-500" />,
-    extra: "Launched our first cloud-based contact center solution.",
+    year: "September 2014",
+    desc: "We identified the problem area and began drafting the problem statement so that we could create a better platform to meet the needs of the customer. Drafting the problem statement provided us with an efficient method to begin developing a better platform for potential customers.",
+    side: "right"
   },
   {
-    year: "2022",
-    title: "Team Growth",
-    desc: "Our team grew to 50+ passionate professionals, united by a shared mission to deliver excellence. We expanded our presence across the GCC and fostered a culture of learning and growth.",
-    icon: <Users className="w-6 h-6 text-green-500" />,
-    extra: "Opened new offices in Abu Dhabi and Riyadh.",
+    year: "January 2015",
+    desc: "We decided to build the CRM Suite, which initially included Dialer, Ticketing and IP-PBX products to help large corporate sectors to streamline their customer relationship management (CX) processes. We assembled the finest team possible to get this project off to a good start.",
+    side: "left"
   },
   {
-    year: "2023",
-    title: "AI & Omnichannel Expansion",
-    desc: "We launched AI-powered analytics and omnichannel support, empowering businesses to connect with their customers like never before. Our platform became smarter, faster, and more reliable.",
-    icon: <Rocket className="w-6 h-6 text-indigo-500" />,
-    extra: "Recognized as a top innovator in the region.",
+    year: "October 2015",
+    desc: "We had started Market Research to determine which product we should focus on initially. We chose to talk with current CRM users, and we learned from them and decided that we should first focus on building Dialer and Ticketing. Following that, we sat down with the team and began planning to develop both products.",
+    side: "right"
   },
   {
-    year: "2024",
-    title: "Scaling New Heights",
-    desc: "With 500+ clients and a growing global footprint, Infonoble continues to set new benchmarks in customer experience. Our journey is just beginning.",
-    icon: <TrendingUp className="w-6 h-6 text-pink-500" />,
-    extra: "Launched operations in Europe and Southeast Asia.",
+    year: "January 2016",
+    desc: "We met various CRM users again to learn about the features of current products. Along with this, we wanted to know that where these products were lacking since we wanted to provide the best products to the customers by enhancing all existing features.",
+    side: "left"
   },
+  {
+    year: "May 2016",
+    desc: "We continued developing and enhancing more process and features to the Dialer, Ticketing, and IP-PBX products by adding all of the necessary functionality based on market research. We had a good-to-go direction after market research since we knew how we should begin the task.",
+    side: "right"
+  },
+  {
+    year: "January 2017",
+    desc: "We returned to the market again to get inputs on our newly developed products, which included Dialer, Ticketing system, and IP-PBX. We received positive comments on these products. Along with this, we received a fresh concept for developing Sales CRM and also, we learned that which features should be incorporated in Sales CRM.",
+    side: "left"
+  },
+  {
+    year: "March 2017",
+    desc: "We began planning for the Sales CRM and intended to test additional products alongside it, such as the Dialer, Ticketing, and IP-PBX. We created the entire strategy and began working with total commitment in order to accomplish this assignment as soon as feasible.",
+    side: "right"
+  },
+  {
+    year: "July 2017",
+    desc: "We had developed the entire CRM Suite, and one new and powerful product, the Sales CRM, had been added to our list. We now had a comprehensive list of successful CRM solutions, including Dialer, Ticketing, IP-PBX, and Sales CRM. Following that, we intended to put the products in the market. However, before releasing, we wanted to deeply evaluate each product to ensure that we were providing the best products to our customers.",
+    side: "left"
+  },
+  {
+    year: "November 2017",
+    desc: "We recruited a testing team of 5-10 individuals and began evaluating each product independently as well as their compatibility with one another in order to complete this work successfully and make all of the products market ready.",
+    side: "right"
+  },
+  {
+    year: "March 2018",
+    desc: "We had successfully finished the products testing phase. Now we wanted to put all of the products through their paces in the context of major corporations. As a result, we began providing the products to CRM users from various companies for testing purposes.",
+    side: "left"
+  },
+  {
+    year: "August 2018",
+    desc: "With the commitment of our staff, we were able to resolve all of the concerns reported by CRM users from various organizations. We had now put all of our products in the market. As a result, couple of customers such as Suzuki Motorcycles, Quest Diagnostic, JP Hospital, BPTP Ltd and Harton Communication Ltd were among have been added to our customers list.",
+    side: "right"
+  },
+  {
+    year: "January 2019",
+    desc: "We discovered a new demand of the CRM market, which was a Chatbot and Social Media integration solutions, because both platforms were popular for providing excellent Sales and Customer Support services.",
+    side: "left"
+  },
+  {
+    year: "January 2019",
+    desc: "Despite many ups and downs, we were able to develop the Chatbot and Social Media integration system thanks to the devotion of our team. Now, the most difficult issue for us was to introduce the entire developed system into the market because we had no idea how potential customers would react to this system.",
+    side: "right"
+  },
+  {
+    year: "April 2019",
+    desc: "To evaluate its efficacy, we began evaluating each product independently and their compatibility with one another once again. We accomplished this with the assistance of our testing team and CRM users from many organizations. The aim was to find any faults or problems in order to make our system bug-free.",
+    side: "left"
+  },
+  {
+    year: "July 2019",
+    desc: "With the commitment of our team, we were able to address all of the minor issues that had previously gone unnoticed. As a outcome, we acquired more confidence and peace of mind in the efficiency of our system.",
+    side: "right"
+  },
+  {
+    year: "October 2019",
+    desc: "We considered putting the name of our entire created suite because we had a variety of effective products. We wished to give the entire suite a single name. We named the entire system Noble-Omnichannel CRM after a mutual consensus with our team.",
+    side: "left"
+  },
+  {
+    year: "December 2019",
+    desc: "Now, we had released three CRM model solutions in the market, included A la Carte CRM Model, CRM Suite Model and Omnichannel CRM Model and started incorporating the solutions in the corporates as per their needs.",
+    side: "right"
+  },
+  {
+    year: "January 2020",
+    desc: "Our team's commitment was the same even throughout the Covid-19 Pandemic. The different customers from different verticals had deeply evaluated and used each module of each product, giving us more confidence in the overall efficiency of Noble-Omnichannel CRM.",
+    side: "left"
+  },
+  {
+    year: "March 2020",
+    desc: "We acquired more confidence in integrating our products into all of the major corporates after ensuring high production and efficiency prior to, during, and after the Covid-19 pandemic lockdown. Today we can proudly say that we have achieved many milestones in just a short span of existence as we not just have developed complete CRM suite NobleCRM - Omni Channel, but has deployed the range of products to many verticals like: BPO's, Call Centers, Automobiles, Manufacturing, Media, Retail, Builder, Pharma, Healthcare, Insurance and Legal to streamline their Customer Support Process (CX). The product has reached to new horizons and our company has been awarded as among Best CRM's.",
+    side: "right"
+  },
+  {
+    year: "Year 2021",
+    desc: "We acquired more confidence in integrating our products into all of the major corporates after ensuring high production and efficiency prior to, during, and after the Covid-19 pandemic lockdown. Today we can proudly say that we have achieved many milestones in just a short span of existence as we not just have developed complete CRM suite NobleCRM - Omni Channel, but has deployed the range of products to many verticals like: BPO's, Call Centers, Automobiles, Manufacturing, Media, Retail, Builder, Pharma, Healthcare, Insurance and Legal to streamline their Customer Support Process (CX). The product has reached to new horizons and our company has been awarded as among Best CRM's.",
+    side: "left"
+  }
 ];
 
 const OurStory = () => {
@@ -46,50 +115,72 @@ const OurStory = () => {
       <HeroSection
         title="Our Story"
         description="From a bold idea in Dubai to a leading force in customer engagement—discover the journey, the people, and the passion behind Infonoble."
+        imageSrc="/images/our-story-hero.jpg"
       />
+      {/* Who We Are - concise intro */}
+      <section className="max-w-2xl mx-auto px-4 mt-8 mb-8 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold text-[hsl(var(--primary))] mb-3">Who We Are</h2>
+        <p className="text-lg text-[hsl(var(--muted-foreground))]">
+          Infonoble is a team of innovators, dreamers, and doers dedicated to transforming customer engagement in the GCC and beyond. We empower businesses with cutting-edge solutions, a human touch, and a relentless commitment to excellence.
+        </p>
+      </section>
       {/* Tagline/Stat */}
-      <section className="max-w-2xl mx-auto px-4 mt-4 mb-8 text-center">
+      <section className="max-w-2xl mx-auto px-4 mt-4 mb-12 text-center">
         <div className="inline-block bg-cyan-100 text-cyan-800 font-semibold px-4 py-2 rounded-full text-base shadow">
           Trusted by 500+ businesses across 7 countries
         </div>
       </section>
-      {/* Intro */}
-      <section className="max-w-2xl mx-auto px-4 mb-12 text-center">
-        <p className="text-xl text-[hsl(var(--muted-foreground))] font-medium">
-          Infonoble&apos;s journey is a story of vision, innovation, and relentless pursuit of excellence.<br />
-          From our first office in Dubai to a global presence, we&apos;ve always believed in the power of technology to transform businesses and lives. Every milestone is a testament to our team&apos;s passion and our clients&apos; trust.
-        </p>
-      </section>
-      {/* Timeline */}
-      <section className="relative max-w-3xl mx-auto px-4 pb-24">
+      {/* Modern Timeline */}
+      <section className="relative max-w-4xl mx-auto px-4 pb-24">
         {/* Decorative background blob */}
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-cyan-100 opacity-30 rounded-full blur-3xl pointer-events-none z-0" />
-        <ol className="relative z-10">
-          {/* Vertical timeline line */}
-          <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-[hsl(var(--primary))] to-cyan-200 rounded-full z-0" />
-          {milestones.map((m, i) => (
-            <li key={i} className="mb-16 flex items-start relative z-10">
-              {/* Year + Icon */}
-              <div className="flex flex-col items-center mr-8 z-10">
-                <span className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-lg border-4 border-[hsl(var(--primary))] text-[hsl(var(--primary))] text-2xl font-bold mb-2 relative">
-                  {m.year}
-                  {/* Icon attached to the circle */}
-                  <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white rounded-full p-1 shadow border border-yellow-300">
-                    {m.icon}
-                  </span>
-                </span>
-              </div>
-              {/* Card */}
-              <div className="bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl border border-[hsl(var(--border))] p-8 min-w-0 flex-1">
-                <h4 className="font-extrabold text-2xl mb-2 text-[hsl(var(--primary))]">{m.title}</h4>
-                <p className="text-[hsl(var(--muted-foreground))] text-lg mb-2">{m.desc}</p>
-                <div className="text-base text-cyan-600 font-semibold italic">{m.extra}</div>
-              </div>
-            </li>
-          ))}
-        </ol>
+        <div className="relative z-10 flex flex-col items-center">
+          {/* Center vertical line */}
+          <div className="absolute left-1/2 top-0 -translate-x-1/2 h-full w-2 bg-gradient-to-b from-[hsl(var(--primary))] to-cyan-200 rounded-full z-0" />
+          <ol className="w-full space-y-0">
+            {journey.map((item, i) => {
+              const isLeft = item.side === 'left';
+              return (
+                <li key={i} className={`relative w-full mb-20 md:mb-0 flex flex-col md:flex-row md:items-center`}>
+                  {/* Left Side (Card for left), Spacer for right */}
+                  <div className={`md:w-1/2 flex ${isLeft ? 'justify-end pr-8' : 'justify-end pr-8 md:invisible md:block'}`}> 
+                    {isLeft && (
+                      <div className={`bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-[hsl(var(--border))] p-8 min-w-0 max-w-lg transition-transform hover:-translate-y-2 hover:shadow-3xl ml-auto`}
+                        style={{
+                          background: 'linear-gradient(135deg, #fff 80%, #e0f7fa 100%)',
+                          boxShadow: '0 8px 32px 0 rgba(0, 188, 212, 0.10)',
+                        }}
+                      >
+                        <div className="font-bold text-lg text-orange-600 mb-2">{item.year}</div>
+                        <p className="text-[hsl(var(--muted-foreground))] text-lg mb-2">{item.desc}</p>
+                      </div>
+                    )}
+                  </div>
+                  {/* Center Dot */}
+                  <div className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:top-auto top-0 md:-translate-y-1/2 z-20 flex justify-center items-center">
+                    <span className="w-7 h-7 flex items-center justify-center rounded-full bg-orange-500 shadow-2xl border-4 border-white text-white text-base font-bold relative animate-fade-in">
+                    </span>
+                  </div>
+                  {/* Right Side (Card for right), Spacer for left */}
+                  <div className={`md:w-1/2 flex ${!isLeft ? 'justify-start pl-8' : 'justify-start pl-8 md:invisible md:block'}`}> 
+                    {!isLeft && (
+                      <div className={`bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-[hsl(var(--border))] p-8 min-w-0 max-w-lg transition-transform hover:-translate-y-2 hover:shadow-3xl mr-auto`}
+                        style={{
+                          background: 'linear-gradient(135deg, #fff 80%, #e0f7fa 100%)',
+                          boxShadow: '0 8px 32px 0 rgba(0, 188, 212, 0.10)',
+                        }}
+                      >
+                        <div className="font-bold text-lg text-orange-600 mb-2">{item.year}</div>
+                        <p className="text-[hsl(var(--muted-foreground))] text-lg mb-2">{item.desc}</p>
+                      </div>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
       </section>
-
       {/* What's Next / Mission */}
       <section className="max-w-2xl mx-auto px-4 pb-24 text-center">
         <h3 className="text-2xl md:text-3xl font-bold text-[hsl(var(--primary))] mb-4">Our Mission</h3>
@@ -100,7 +191,6 @@ const OurStory = () => {
           The journey continues...
         </div>
       </section>
-      
     </>
   );
 };
