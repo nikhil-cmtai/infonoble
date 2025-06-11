@@ -1,87 +1,89 @@
 import React from 'react';
 import HeroSection from '@/components/all/hero-section';
-import { Users, MessageCircle, Cloud, Zap, Puzzle, PhoneCall, CheckCircle } from 'lucide-react';
+import CTASection from '@/components/all/cta-section';
+import { PhoneCall, ShieldCheck, Cloud, Settings, Users, Zap, CheckCircle, MonitorSmartphone } from 'lucide-react';
 import Image from 'next/image';
 
+// --- Content for IP PBX ---
 const whyIntro =
-  "NobleOmniChannel empowers your business to deliver seamless, unified customer experiences across every channel—voice, chat, email, and social. Simplify your operations and delight your customers with one powerful platform.";
+  "NobleIP-PBX is a private branch exchange (telephone switching system within a business) that routes call between VoIP (voice over Internet Protocol or IP) users on local lines while enabling all users to share a limited number of external phone lines. NobleIP-PBX feature enables organizations to leverage their managed intranet to cut long-distance costs and get the benefits of a single network for voice and data. The monthly savings with NobleIP-PBX are considerable. If you have many locations, you may effortlessly link phone systems and make free phone calls between them. Adding users with NobleIP-PBX is simple; there is no need to update or purchase new gear.";
 
 const whyPoints = [
   {
-    icon: <MessageCircle className="w-7 h-7 text-[hsl(var(--primary))]" />,
-    title: "Unified Inbox",
-    desc: "All customer conversations in one place, no matter the channel.",
-  },
-  {
-    icon: <Zap className="w-7 h-7 text-[hsl(var(--secondary))]" />,
-    title: "Smart Automation",
-    desc: "Automate repetitive tasks and boost agent productivity.",
+    icon: <ShieldCheck className="w-7 h-7 text-[hsl(var(--primary))]" />,
+    title: "Secure & Reliable",
+    desc: "Leverage your managed intranet for secure, cost-effective communication.",
   },
   {
     icon: <Cloud className="w-7 h-7 text-cyan-500" />,
-    title: "Cloud Flexibility",
-    desc: "Access and manage your contact center from anywhere, anytime.",
+    title: "Cloud or On-Premise",
+    desc: "Available as both a physical device and a software platform.",
   },
   {
-    icon: <CheckCircle className="w-7 h-7 text-yellow-400" />,
-    title: "Actionable Insights",
-    desc: "Real-time analytics to optimize every customer interaction.",
+    icon: <PhoneCall className="w-7 h-7 text-orange-500" />,
+    title: "Effortless Scalability",
+    desc: "Easily add users and locations without new hardware.",
+  },
+  {
+    icon: <Settings className="w-7 h-7 text-[hsl(var(--secondary))]" />,
+    title: "Unified Network",
+    desc: "Benefit from a single network for voice and data across all sites.",
   },
 ];
 
 const features = [
   {
-    icon: <MessageCircle className="w-8 h-8 text-[hsl(var(--primary))]" />,
-    title: "Unified Conversations",
-    desc: "Manage all your voice, chat, email, and social media conversations in one place.",
+    icon: <Settings className="w-8 h-8 text-[hsl(var(--primary))]" />,
+    title: "Smart IVRs & Call Routing",
+    desc: "Advanced call management with IVRs, routing, and transfer features.",
   },
   {
-    icon: <Puzzle className="w-8 h-8 text-[hsl(var(--secondary))]" />,
-    title: "15+ CRM Integrations",
-    desc: "Connect with your favorite CRMs and tools for a unified workflow.",
+    icon: <MonitorSmartphone className="w-8 h-8 text-[hsl(var(--secondary))]" />,
+    title: "Remote Support & Hot Desking",
+    desc: "Support for remote work, hot desking, and mobile extensions.",
   },
   {
     icon: <Zap className="w-8 h-8 text-[hsl(var(--accent))]" />,
-    title: "Smart Automation",
-    desc: "Automate repetitive tasks and boost efficiency with workflows and chatbots.",
+    title: "Call Recording & Monitoring",
+    desc: "Monitor, record, and analyze calls for quality assurance.",
+  },
+  {
+    icon: <CheckCircle className="w-8 h-8 text-green-500" />,
+    title: "Conferencing & Collaboration",
+    desc: "Built-in conferencing, call queuing, and collaboration tools.",
   },
   {
     icon: <Cloud className="w-8 h-8 text-cyan-500" />,
-    title: "Cloud-Based",
-    desc: "Access your contact center from anywhere, anytime, with secure cloud technology.",
+    title: "Voicemail & Inbound/Outbound Routes",
+    desc: "Flexible voicemail, inbound, and outbound call management.",
   },
   {
-    icon: <PhoneCall className="w-8 h-8 text-green-500" />,
-    title: "Omnichannel Routing",
-    desc: "Route customer queries to the right agent, on the right channel, every time.",
-  },
-  {
-    icon: <CheckCircle className="w-8 h-8 text-yellow-400" />,
-    title: "Analytics & Insights",
-    desc: "Get actionable insights across all channels for better decision making.",
+    icon: <Users className="w-8 h-8 text-yellow-400" />,
+    title: "Contact Manager & Groups",
+    desc: "Manage contacts, ring groups, and least cost routing easily.",
   },
 ];
 
 const steps = [
   {
     icon: <Users className="w-7 h-7 text-[hsl(var(--primary))]" />,
-    title: "Connect Channels",
-    desc: "Integrate all your communication channels in one platform.",
+    title: "Connect Extensions",
+    desc: "Link all your phone extensions and users to the PBX system.",
   },
   {
-    icon: <MessageCircle className="w-7 h-7 text-[hsl(var(--secondary))]" />,
-    title: "Engage Customers",
-    desc: "Respond to customers on their preferred channel, instantly.",
+    icon: <CheckCircle className="w-7 h-7 text-[hsl(var(--secondary))]" />,
+    title: "Configure Routing",
+    desc: "Set up call routing, IVRs, and rules for seamless communication.",
   },
   {
-    icon: <Zap className="w-7 h-7 text-[hsl(var(--accent))]" />,
-    title: "Automate Workflows",
-    desc: "Use smart automation to handle routine queries and tasks.",
+    icon: <PhoneCall className="w-7 h-7 text-orange-500" />,
+    title: "Enable Features",
+    desc: "Activate call recording, conferencing, and remote support.",
   },
   {
     icon: <Cloud className="w-7 h-7 text-cyan-500" />,
-    title: "Analyze & Optimize",
-    desc: "Track performance and optimize your customer experience.",
+    title: "Scale Effortlessly",
+    desc: "Add users, locations, and features as your business grows.",
   },
 ];
 
@@ -93,23 +95,23 @@ const integrations = [
   { img: "/images/chatbot-icon.png", label: "Chatbots" },
 ];
 
-const OmniChannel = () => {
+const NobleIPPBX = () => {
   return (
     <div className="bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--secondary)/0.07)] to-[hsl(var(--accent)/0.10)]">
       {/* 1. Hero Section */}
       <HeroSection
-        title="NobleOmniChannel"
-        description="Deliver seamless, unified customer experiences across every channel—voice, chat, email, and social. Simplify your operations, empower your agents, and delight your customers with one powerful platform that brings all conversations and data together."
-        imageSrc="/omni-channel.png"
+        title="NobleIP-PBX"
+        description="A scalable, secure, and cost-effective business phone system for every company. Connect, manage, and optimize all your communications with ease—on-premise or in the cloud."
+        imageSrc="/noble-ip-pbx.png"
       />
 
-      {/* 2. Why Choose NobleOmniChannel */}
+      {/* 2. Why Choose NobleIP-PBX */}
       <section className="max-w-6xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-[hsl(var(--primary))] mb-4">Why NobleOmniChannel?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[hsl(var(--primary))] mb-4">Why NobleIP-PBX?</h2>
             <p className="text-lg text-[hsl(var(--muted-foreground))] mb-6">{whyIntro}</p>
-            <div className="flex flex-col gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {whyPoints.map((point, i) => (
                 <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-gradient-to-br from-[hsl(var(--background))] to-[hsl(var(--secondary)/0.10)] border border-[hsl(var(--border))]">
                   <div className="p-2 rounded-lg bg-[hsl(var(--primary)/0.08)]">
@@ -125,8 +127,8 @@ const OmniChannel = () => {
           </div>
           <div className="flex justify-center">
             <Image
-              src="/images/omni-why.png"
-              alt="Why NobleOmniChannel"
+              src="/images/ip-pbx-why.png"
+              alt="Why NobleIP-PBX"
               className="rounded-2xl object-contain w-full h-auto"
               width={400}
               height={400}
@@ -154,7 +156,7 @@ const OmniChannel = () => {
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-cyan-100 opacity-30 rounded-full blur-3xl pointer-events-none z-0" />
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[hsl(var(--primary))]">How It Works</h2>
         <p className="text-lg text-[hsl(var(--muted-foreground))] text-center mb-12 max-w-2xl mx-auto">
-          See how NobleOmniChannel unifies your customer experience across every channel.
+          See how NobleIP-PBX transforms your business communication with seamless integration and scalability.
         </p>
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
           {steps.map((step, i) => (
@@ -191,20 +193,10 @@ const OmniChannel = () => {
         </div>
       </section>
 
-      {/* 6. Contact/CTA Section */}
-      <section className="max-w-3xl mx-auto px-4 py-16 text-center">
-        <p className="text-lg text-[hsl(var(--muted-foreground))] mb-6">
-          NobleOmnichannel CRM successfully combines all of these platforms, bringing together the most relevant communication channels (phone, email, chat, and social media) in a single interface, simplifying the company&apos;s contact with the customer for a wonderful experience. Today, NobleOmnichannel CRM is a crucial component for supporting clients that lead several lives at the same time - social, professional, personal, and individual. To provide a better client experience (CX).
-        </p>
-        <a
-          href="/contact"
-          className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white font-bold text-lg shadow-lg hover:scale-105 transition-all"
-        >
-          Contact Us &rarr;
-        </a>
-      </section>
+      {/* 6. CTA Section */}
+      <CTASection />
     </div>
   );
 };
 
-export default OmniChannel;
+export default NobleIPPBX; 

@@ -28,24 +28,24 @@ const whyMenu = [
 
 const productsMenu = [
   {
-    title: "Noble Dialer",
+    title: "NobleDialer",
     desc: "The Leading Cloud Contact Center Software in the Middle East.",
     href: "/noble-dialer",
   },
   {
-    title: "Omnichannel",
+    title: "NobleOmniChannel",
     desc: "Manage all your Voice, WhatsApp conversations seamlessly in one place.",
     href: "/omni-channel",
   },
   {
-    title: "IP PBX",
+    title: "NobleIP-PBX",
     desc: "A scalable business phone system for every company.",
     href: "/ip-pbx",
   },
   {
-    title: "Voice AI",
-    desc: "Power your business with intelligent conversations and seamless automation using INFONOBLE Workflows and Chatbots.",
-    href: "/voice-ai",
+    title: "NobleChatBot",
+    desc: "AI-powered chatbot for automated customer interactions.",
+    href: "/noble-chatbot",
   }
 ];
 
@@ -159,17 +159,20 @@ export default function Header() {
                         <div key={colIdx} className={`min-w-[180px] ${colIdx === 0 ? 'pr-8 border-r border-[hsl(var(--border))]' : 'pl-8'}`}> 
                           <div className="text-lg font-bold bg-gradient-to-r from-orange-500 to-blue-500 bg-clip-text text-transparent mb-3">{col.heading}</div>
                           <ul className="space-y-2">
-                            {col.items.map((sub, subIdx) => (
-                              <li key={subIdx}>
-                                <Link
-                                  href={sub.href}
-                                  className="flex items-center justify-between text-[hsl(var(--foreground))] font-semibold text-base px-0 py-1 rounded-lg hover:bg-[hsl(var(--muted))] hover:text-orange-500 transition"
-                                >
-                                  <span>{sub.label}</span>
-                                  <ChevronRight className="w-5 h-5 ml-2 text-orange-500" />
-                                </Link>
-                              </li>
-                            ))}
+                            {col.items.map((sub, subIdx) => {
+                              const isActive = typeof window !== 'undefined' && window.location.pathname === sub.href;
+                              return (
+                                <li key={subIdx}>
+                                  <Link
+                                    href={sub.href}
+                                    className={`flex items-center justify-between text-[hsl(var(--foreground))] font-semibold text-base py-1 rounded-lg hover:bg-[hsl(var(--muted))] hover:text-orange-500 transition ${isActive ? 'bg-blue-50 text-orange-500 px-4' : 'px-2'}`}
+                                  >
+                                    <span>{sub.label}</span>
+                                    <ChevronRight className="w-5 h-5 ml-2 text-orange-500" />
+                                  </Link>
+                                </li>
+                              );
+                            })}
                           </ul>
                         </div>
                       ))}
@@ -177,22 +180,25 @@ export default function Header() {
                   )}
                   {/* Product Mega Menu */}
                   {item.isProductMega && openIndex === idx && Array.isArray(item.submenu) && (
-                    <div className="absolute left-1/2 -translate-x-1/2 mt-4 min-w-[720px] rounded-2xl bg-white/90 backdrop-blur-xl shadow-2xl py-8 px-8 z-50 grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-2 border border-[hsl(var(--border))]">
-                      {item.submenu.map((prod, prodIdx) => (
-                        <Link
-                          key={prodIdx}
-                          href={prod.href}
-                          className="flex flex-col px-0 py-2 rounded-lg hover:bg-[hsl(var(--muted))] transition group"
-                        >
-                          <span className="flex items-center justify-between font-bold text-[hsl(var(--foreground))] text-base group-hover:text-orange-500 transition-all">
-                            {prod.title}
-                            <ChevronRight className="w-5 h-5 ml-2 text-orange-500 group-hover:text-orange-600 transition-all" />
-                          </span>
-                          <span className="text-sm text-[hsl(var(--foreground))] font-medium mt-1">
-                            {prod.desc}
-                          </span>
-                        </Link>
-                      ))}
+                    <div className="absolute left-1/2 -translate-x-1/2 mt-4 min-w-[480px] rounded-2xl bg-white/90 backdrop-blur-xl shadow-2xl py-8 px-8 z-50 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 border border-[hsl(var(--border))]">
+                      {item.submenu.map((prod, prodIdx) => {
+                        const isActive = typeof window !== 'undefined' && window.location.pathname === prod.href;
+                        return (
+                          <Link
+                            key={prodIdx}
+                            href={prod.href}
+                            className={`flex flex-col py-2 rounded-lg hover:bg-[hsl(var(--muted))] transition group ${isActive ? 'bg-blue-50 text-orange-500 px-4' : 'px-2'}`}
+                          >
+                            <span className="flex items-center justify-between font-bold text-[hsl(var(--foreground))] text-base group-hover:text-orange-500 transition-all">
+                              {prod.title}
+                              <ChevronRight className="w-5 h-5 ml-2 text-orange-500 group-hover:text-orange-600 transition-all" />
+                            </span>
+                            <span className="text-sm text-[hsl(var(--foreground))] font-medium mt-1">
+                              {prod.desc}
+                            </span>
+                          </Link>
+                        );
+                      })}
                     </div>
                   )}
                   {/* Solutions Mega Menu */}
@@ -200,19 +206,22 @@ export default function Header() {
                     <div className="absolute left-1/2 -translate-x-1/2 mt-4 min-w-[900px] rounded-2xl bg-white/90 backdrop-blur-xl shadow-2xl py-8 px-8 z-50 flex gap-12 border border-[hsl(var(--border))]">
                       {item.submenu.map((col, colIdx) => (
                         <div key={colIdx} className="min-w-[220px]">
-                          <div className={col.headingClass}>{col.heading}</div>
+                          <div className="text-lg font-bold bg-gradient-to-r from-orange-500 to-blue-500 bg-clip-text text-transparent mb-3">{col.heading}</div>
                           <ul className="space-y-2">
-                            {col.items.map((sub, subIdx) => (
-                              <li key={subIdx}>
-                                <Link
-                                  href={sub.href}
-                                  className="flex items-center justify-between text-[hsl(var(--foreground))] font-semibold text-lg px-0 py-1 rounded-lg hover:bg-[hsl(var(--muted))] hover:text-orange-500 transition"
-                                >
-                                  <span>{sub.label}</span>
-                                  <ChevronRight className="w-5 h-5 ml-2 text-orange-500" />
-                                </Link>
-                              </li>
-                            ))}
+                            {col.items.map((sub, subIdx) => {
+                              const isActive = typeof window !== 'undefined' && window.location.pathname === sub.href;
+                              return (
+                                <li key={subIdx}>
+                                  <Link
+                                    href={sub.href}
+                                    className={`flex items-center justify-between text-[hsl(var(--foreground))] font-semibold text-lg py-1 rounded-lg hover:bg-[hsl(var(--muted))] hover:text-orange-500 transition ${isActive ? 'bg-blue-50 text-orange-500 px-4' : 'px-2'}`}
+                                  >
+                                    <span>{sub.label}</span>
+                                    <ChevronRight className="w-5 h-5 ml-2 text-orange-500" />
+                                  </Link>
+                                </li>
+                              );
+                            })}
                           </ul>
                         </div>
                       ))}

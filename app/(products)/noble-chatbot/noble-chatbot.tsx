@@ -1,87 +1,101 @@
+'use client'
+
 import React from 'react';
 import HeroSection from '@/components/all/hero-section';
-import { Users, MessageCircle, Cloud, Zap, Puzzle, PhoneCall, CheckCircle } from 'lucide-react';
+import CTASection from '@/components/all/cta-section';
+import { MessageCircle, Zap, Users, Cloud, CheckCircle, Settings, Bot, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
 
-const whyIntro =
-  "NobleOmniChannel empowers your business to deliver seamless, unified customer experiences across every channel—voice, chat, email, and social. Simplify your operations and delight your customers with one powerful platform.";
+// --- Content for NobleChatbot ---
+const heroDesc = `
+AI-powered chatbot for your business.
+Automate customer conversations 24/7.
+Engage users on WhatsApp, web, and social.
+Boost satisfaction and reduce support costs.`;
+
+const whyIntro = `
+NobleChatbot is designed to replicate human-like conversations and automate customer support across all digital channels.
+It streamlines interactions between users and services, providing instant, accurate responses 24/7.
+With advanced AI and NLP, it understands user intent and delivers personalized experiences.
+Businesses can reduce operational costs, improve engagement, and boost satisfaction.
+`;
 
 const whyPoints = [
   {
-    icon: <MessageCircle className="w-7 h-7 text-[hsl(var(--primary))]" />,
-    title: "Unified Inbox",
-    desc: "All customer conversations in one place, no matter the channel.",
+    icon: <Bot className="w-7 h-7 text-[hsl(var(--primary))]" />,
+    title: "AI-Powered Conversations",
+    desc: "Mimics human-like chat across apps, web, and social media.",
   },
   {
     icon: <Zap className="w-7 h-7 text-[hsl(var(--secondary))]" />,
-    title: "Smart Automation",
-    desc: "Automate repetitive tasks and boost agent productivity.",
+    title: "Instant Response",
+    desc: "Delivers fast, accurate answers to user queries 24/7.",
+  },
+  {
+    icon: <ShieldCheck className="w-7 h-7 text-green-500" />,
+    title: "Secure & Reliable",
+    desc: "Handles sensitive data and privacy with enterprise-grade security.",
   },
   {
     icon: <Cloud className="w-7 h-7 text-cyan-500" />,
-    title: "Cloud Flexibility",
-    desc: "Access and manage your contact center from anywhere, anytime.",
-  },
-  {
-    icon: <CheckCircle className="w-7 h-7 text-yellow-400" />,
-    title: "Actionable Insights",
-    desc: "Real-time analytics to optimize every customer interaction.",
+    title: "Cloud-Based & Scalable",
+    desc: "Easily scales to handle any number of conversations.",
   },
 ];
 
 const features = [
   {
     icon: <MessageCircle className="w-8 h-8 text-[hsl(var(--primary))]" />,
-    title: "Unified Conversations",
-    desc: "Manage all your voice, chat, email, and social media conversations in one place.",
+    title: "Multi-Channel Support",
+    desc: "Engage users on WhatsApp, web, mobile apps, and social media.",
   },
   {
-    icon: <Puzzle className="w-8 h-8 text-[hsl(var(--secondary))]" />,
-    title: "15+ CRM Integrations",
-    desc: "Connect with your favorite CRMs and tools for a unified workflow.",
+    icon: <Zap className="w-8 h-8 text-[hsl(var(--secondary))]" />,
+    title: "Natural Language Processing",
+    desc: "Understands and responds to user intent with advanced NLP.",
   },
   {
-    icon: <Zap className="w-8 h-8 text-[hsl(var(--accent))]" />,
-    title: "Smart Automation",
-    desc: "Automate repetitive tasks and boost efficiency with workflows and chatbots.",
+    icon: <CheckCircle className="w-8 h-8 text-green-500" />,
+    title: "Automated Workflows",
+    desc: "Streamline support, lead capture, and more with automation.",
+  },
+  {
+    icon: <Settings className="w-8 h-8 text-[hsl(var(--accent))]" />,
+    title: "Custom Integrations",
+    desc: "Connect with CRMs, databases, and business tools easily.",
+  },
+  {
+    icon: <Users className="w-8 h-8 text-yellow-400" />,
+    title: "Human Handover",
+    desc: "Seamlessly transfer chats to live agents when needed.",
   },
   {
     icon: <Cloud className="w-8 h-8 text-cyan-500" />,
-    title: "Cloud-Based",
-    desc: "Access your contact center from anywhere, anytime, with secure cloud technology.",
-  },
-  {
-    icon: <PhoneCall className="w-8 h-8 text-green-500" />,
-    title: "Omnichannel Routing",
-    desc: "Route customer queries to the right agent, on the right channel, every time.",
-  },
-  {
-    icon: <CheckCircle className="w-8 h-8 text-yellow-400" />,
     title: "Analytics & Insights",
-    desc: "Get actionable insights across all channels for better decision making.",
+    desc: "Track engagement, satisfaction, and optimize performance.",
   },
 ];
 
 const steps = [
   {
     icon: <Users className="w-7 h-7 text-[hsl(var(--primary))]" />,
-    title: "Connect Channels",
-    desc: "Integrate all your communication channels in one platform.",
+    title: "User Initiates Chat",
+    desc: "Customer starts a conversation on their preferred channel.",
   },
   {
-    icon: <MessageCircle className="w-7 h-7 text-[hsl(var(--secondary))]" />,
-    title: "Engage Customers",
-    desc: "Respond to customers on their preferred channel, instantly.",
+    icon: <Bot className="w-7 h-7 text-[hsl(var(--secondary))]" />,
+    title: "AI Processes Request",
+    desc: "NobleChatbot understands and processes the user's intent.",
   },
   {
     icon: <Zap className="w-7 h-7 text-[hsl(var(--accent))]" />,
-    title: "Automate Workflows",
-    desc: "Use smart automation to handle routine queries and tasks.",
+    title: "Instant Response",
+    desc: "Delivers accurate, context-aware answers instantly.",
   },
   {
-    icon: <Cloud className="w-7 h-7 text-cyan-500" />,
-    title: "Analyze & Optimize",
-    desc: "Track performance and optimize your customer experience.",
+    icon: <CheckCircle className="w-7 h-7 text-green-500" />,
+    title: "Escalate or Resolve",
+    desc: "Transfers to a human agent if needed, or resolves the query automatically.",
   },
 ];
 
@@ -93,21 +107,21 @@ const integrations = [
   { img: "/images/chatbot-icon.png", label: "Chatbots" },
 ];
 
-const OmniChannel = () => {
+const NobleChatbot = () => {
   return (
     <div className="bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--secondary)/0.07)] to-[hsl(var(--accent)/0.10)]">
       {/* 1. Hero Section */}
       <HeroSection
-        title="NobleOmniChannel"
-        description="Deliver seamless, unified customer experiences across every channel—voice, chat, email, and social. Simplify your operations, empower your agents, and delight your customers with one powerful platform that brings all conversations and data together."
-        imageSrc="/omni-channel.png"
+        title="NobleChatbot"
+        description={heroDesc}
+        imageSrc="/noble-chatbot.png"
       />
 
-      {/* 2. Why Choose NobleOmniChannel */}
+      {/* 2. Why Choose NobleChatbot */}
       <section className="max-w-6xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-[hsl(var(--primary))] mb-4">Why NobleOmniChannel?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[hsl(var(--primary))] mb-4">Why NobleChatbot?</h2>
             <p className="text-lg text-[hsl(var(--muted-foreground))] mb-6">{whyIntro}</p>
             <div className="flex flex-col gap-4">
               {whyPoints.map((point, i) => (
@@ -125,8 +139,8 @@ const OmniChannel = () => {
           </div>
           <div className="flex justify-center">
             <Image
-              src="/images/omni-why.png"
-              alt="Why NobleOmniChannel"
+              src="/images/noble-chatbot-why.png"
+              alt="Why NobleChatbot"
               className="rounded-2xl object-contain w-full h-auto"
               width={400}
               height={400}
@@ -154,7 +168,7 @@ const OmniChannel = () => {
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-cyan-100 opacity-30 rounded-full blur-3xl pointer-events-none z-0" />
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[hsl(var(--primary))]">How It Works</h2>
         <p className="text-lg text-[hsl(var(--muted-foreground))] text-center mb-12 max-w-2xl mx-auto">
-          See how NobleOmniChannel unifies your customer experience across every channel.
+          See how NobleChatbot automates and enhances customer engagement across all digital channels.
         </p>
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
           {steps.map((step, i) => (
@@ -191,20 +205,10 @@ const OmniChannel = () => {
         </div>
       </section>
 
-      {/* 6. Contact/CTA Section */}
-      <section className="max-w-3xl mx-auto px-4 py-16 text-center">
-        <p className="text-lg text-[hsl(var(--muted-foreground))] mb-6">
-          NobleOmnichannel CRM successfully combines all of these platforms, bringing together the most relevant communication channels (phone, email, chat, and social media) in a single interface, simplifying the company&apos;s contact with the customer for a wonderful experience. Today, NobleOmnichannel CRM is a crucial component for supporting clients that lead several lives at the same time - social, professional, personal, and individual. To provide a better client experience (CX).
-        </p>
-        <a
-          href="/contact"
-          className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white font-bold text-lg shadow-lg hover:scale-105 transition-all"
-        >
-          Contact Us &rarr;
-        </a>
-      </section>
+      {/* 6. CTA Section */}
+      <CTASection />
     </div>
   );
 };
 
-export default OmniChannel;
+export default NobleChatbot;
