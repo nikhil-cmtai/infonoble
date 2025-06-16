@@ -102,7 +102,7 @@ const NobleIPPBX = () => {
       <HeroSection
         title="NobleIP-PBX"
         description="A scalable, secure, and cost-effective business phone system for every company. Connect, manage, and optimize all your communications with ease—on-premise or in the cloud."
-        imageSrc="/noble-ip-pbx.png"
+        imageSrc="/products/ip-pbx.jpg"
       />
 
       {/* 2. Why Choose NobleIP-PBX */}

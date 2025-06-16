@@ -8,7 +8,7 @@ export default function Contact() {
       <HeroSection
         title="Contact Us"
         description="We&rsquo;d love to hear from you. Reach out and our team will get back to you soon."
-        imageSrc="/images/contact-hero.jpg"
+        imageSrc="/banner/contact.png"
       />
       {/* Contact Details & Form */}
       <section className="relative z-10 max-w-7xl mx-auto px-4 pb-24">

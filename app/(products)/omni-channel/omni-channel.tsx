@@ -98,9 +98,9 @@ const OmniChannel = () => {
     <div className="bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--secondary)/0.07)] to-[hsl(var(--accent)/0.10)]">
       {/* 1. Hero Section */}
       <HeroSection
-        title="NobleOmniChannel"
+        title="Noble OmniChannel"
         description="Deliver seamless, unified customer experiences across every channel—voice, chat, email, and social. Simplify your operations, empower your agents, and delight your customers with one powerful platform that brings all conversations and data together."
-        imageSrc="/omni-channel.png"
+        imageSrc="/products/omnichannel.jpg"
       />
 
       {/* 2. Why Choose NobleOmniChannel */}

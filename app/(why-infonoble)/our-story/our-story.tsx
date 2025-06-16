@@ -115,7 +115,7 @@ const OurStory = () => {
       <HeroSection
         title="Our Story"
         description="From a bold idea in Dubai to a leading force in customer engagement—discover the journey, the people, and the passion behind Infonoble."
-        imageSrc="/images/our-story-hero.jpg"
+        imageSrc="/banner/story.jpg"
       />
       {/* Who We Are - concise intro */}
       <section className="max-w-2xl mx-auto px-4 mt-8 mb-8 text-center">

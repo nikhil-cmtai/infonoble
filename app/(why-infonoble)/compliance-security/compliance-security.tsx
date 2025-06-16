@@ -79,7 +79,7 @@ const ComplianceSecurity = () => {
       <HeroSection
         title="Compliance & Security"
         description="Enterprise-grade security, privacy, and compliance—built for your peace of mind. We protect your data and help you meet global and regional regulations."
-        imageSrc="/images/compliance-security-hero.jpg"
+        imageSrc="/banner/security.png"
       />
       {/* Certifications Section */}
       <section className="max-w-5xl mx-auto px-4 py-12 text-center">

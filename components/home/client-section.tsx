@@ -4,12 +4,26 @@ import React from "react";
 import Image from "next/image";
 
 const clients = [
-  { name: "Al Noor Group", logo: "/clients/logo1.png" },
-  { name: "GCC Retail", logo: "/clients/logo2.png" },
-  { name: "FinServe ME", logo: "/clients/logo3.png" },
-  { name: "TechX", logo: "/clients/logo4.png" },
-  { name: "BPO Connect", logo: "/clients/logo5.png" },
-  { name: "RealEstatePro", logo: "/clients/logo6.png" },
+  {
+    name: "Gulf Cooperation Council (GCC)",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/3/31/Logo_gcc.png"
+  },
+  {
+    name: "BPO Connect",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/4/4b/BPO_logo.svg"
+  },
+  {
+    name: "Tech‑X Corporation",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Tech-X_Logo.svg"
+  },
+  {
+    name: "Century 21 Real Estate",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/2/26/Century_21_Real_Estate_logo.svg"
+  },
+  {
+    name: "Consus Real Estate",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/1e/Consus_Real_Estate_Logo.svg"
+  }
 ];
 
 const ClientSection = () => {

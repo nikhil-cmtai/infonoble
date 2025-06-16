@@ -64,7 +64,7 @@ const SuccessStories = () => {
       <HeroSection
         title="Our Journey of Impact"
         description="From our first client to 500+ businesses, Infonoble has been a catalyst for digital transformation across industries. Our commitment to excellence and partnership has empowered organizations to deliver unforgettable customer experiences."
-        imageSrc="/images/success-stories-hero.jpg"
+        imageSrc="/banner/success.jpg"
       />
       {/* Testimonials Section */}
       <section className="max-w-6xl mx-auto px-4 py-16">

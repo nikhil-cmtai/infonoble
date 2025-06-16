@@ -78,7 +78,7 @@ const NobleDialer = () => {
       <HeroSection
         title="Noble Dialer"
         description="NobleDialer is an advanced automatic dialing system that consolidates all your leads and calls in one centralized platform. Designed for customer service and contact centers, it enhances consumer relations through seamless integration with email, WhatsApp, CRM systems, social media, and chatbots."
-        imageSrc="/noble-dialer.png"
+        imageSrc="/products/dialer.jpg"
       />
 
       {/* 2. Why Choose NobleDialer (custom section) */}

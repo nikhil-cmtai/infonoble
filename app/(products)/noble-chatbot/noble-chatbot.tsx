@@ -114,7 +114,7 @@ const NobleChatbot = () => {
       <HeroSection
         title="NobleChatbot"
         description={heroDesc}
-        imageSrc="/noble-chatbot.png"
+        imageSrc="/products/chatbot.jpg"
       />
 
       {/* 2. Why Choose NobleChatbot */}

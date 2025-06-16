@@ -41,7 +41,7 @@ export default function Features() {
       <HeroSection
         title="Features"
         description="Infonoble's features are the best in the industry. We use the latest technology to ensure that your calls are crystal clear."
-        imageSrc="/features-hero.png"
+        imageSrc="/banner/features.jpg"
       />
       {/* Decorative background blob */}
       <div className="relative">

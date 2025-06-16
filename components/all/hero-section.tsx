@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+
 interface HeroSectionProps {
   title: string;
   description: string;
@@ -17,7 +18,7 @@ const HeroSection = ({
   imageSrc
 }: HeroSectionProps) => {
   return (
-    <section className="relative overflow-hidden py-16 md:py-24 bg-gradient-to-br from-cyan-50 via-white to-blue-50">
+    <section className="relative overflow-hidden py-16 md:py-8 bg-gradient-to-br from-cyan-50 via-white to-blue-50">
       {/* Decorative Blobs */}
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-cyan-100 rounded-full opacity-30 blur-3xl pointer-events-none" />
       <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-blue-100 rounded-full opacity-30 blur-3xl pointer-events-none" />
@@ -38,14 +39,16 @@ const HeroSection = ({
         </div>
         {/* Right: Image */}
         <div className="flex-1 flex justify-center">
-          <Image
-            src={imageSrc || ""}
-            alt={title}
-            width={400}
-            height={400}
-            className="rounded-2xl object-contain"
-            priority
-          />
+          <div className="w-full max-w-[360px] md:max-w-[500px]">
+            <Image
+              src={imageSrc || ""}
+              alt={title}
+              width={500}
+              height={500}
+              className="rounded-2xl object-contain w-full h-auto"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
