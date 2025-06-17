@@ -125,7 +125,7 @@ const OmniChannel = () => {
           </div>
           <div className="flex justify-center">
             <Image
-              src="/images/omni-why.png"
+              src="/products/omnichannel2.jpg"
               alt="Why NobleOmniChannel"
               className="rounded-2xl object-contain w-full h-auto"
               width={400}

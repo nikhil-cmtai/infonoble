@@ -139,7 +139,7 @@ const NobleChatbot = () => {
           </div>
           <div className="flex justify-center">
             <Image
-              src="/images/noble-chatbot-why.png"
+              src="/products/chatbot2.jpg"
               alt="Why NobleChatbot"
               className="rounded-2xl object-contain w-full h-auto"
               width={400}

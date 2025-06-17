@@ -127,7 +127,7 @@ const NobleIPPBX = () => {
           </div>
           <div className="flex justify-center">
             <Image
-              src="/images/ip-pbx-why.png"
+              src="/products/ip-pbx2.png"
               alt="Why NobleIP-PBX"
               className="rounded-2xl object-contain w-full h-auto"
               width={400}
