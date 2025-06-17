@@ -41,7 +41,7 @@ const faqs = [
         a: "Absolutely! Our support team is available 24/7 to assist you at every step."
     },
 ];
-
+    
 const companySizes = [
     { value: '', label: 'Select Company Size' },
     { value: '1-30', label: '1-30' },
@@ -104,7 +104,7 @@ export default function GetDemo() {
             <HeroSection
                 title="Get a Demo"
                 description="We'll help you get started with our products and services. Book a personalized walkthrough with our experts."
-                imageSrc="/images/get-demo.png"
+                imageSrc="/banner/book-demo.jpg"
             />
             {/* Demo Request Form */}
             <section className="max-w-2xl mx-auto px-4 py-12">
@@ -140,7 +140,6 @@ export default function GetDemo() {
                                     <SelectValue placeholder="Select Company Size" />
                                 </SelectTrigger>
                                 <SelectContent className="z-[1000]">
-                                    <SelectItem value="" disabled>Select Company Size</SelectItem>
                                     {companySizes.filter(size => size.value !== '').map((size) => (
                                         <SelectItem key={size.value} value={size.value}>
                                             {size.label}
