@@ -110,19 +110,19 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[92vw] max-w-7xl rounded-full bg-white/70 backdrop-blur-xl shadow-lg flex items-center px-4 md:px-10 py-3 border border-[hsl(var(--border))] min-h-[64px] transition-all">
+      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[94vw] max-w-7xl rounded-2xl bg-white/80 backdrop-blur-xl shadow-lg flex items-center px-6 md:px-8 py-4 border border-[hsl(var(--border))] min-h-[70px] transition-all">
         <div className="flex items-center w-full">
           {/* Logo */}
-          <div className="flex-shrink-0 mr-4 md:mr-8 cursor-pointer">
+          <div className="flex-shrink-0 mr-6 md:mr-12 cursor-pointer">
             <Link href="/">
-              <span className="text-2xl font-bold text-[hsl(var(--foreground))]">
+              <span className="text-2xl md:text-3xl font-extrabold text-[hsl(var(--foreground))]">
                 INFO
-                <span className="text-2xl font-bold text-orange-500">NOBLE</span>
+                <span className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">NOBLE</span>
               </span>
             </Link>
           </div>
           {/* Desktop Nav Links */}
-          <nav className="flex-1 justify-center space-x-8 relative hidden lg:flex">
+          <nav className="flex-1 justify-center space-x-10 relative hidden lg:flex">
             {navItems.map((item, idx) => (
               <div key={item.label} className="relative group">
                 {item.submenu ? (
@@ -137,7 +137,7 @@ export default function Header() {
                   >
                     <button
                       type="button"
-                      className="font-semibold text-[hsl(var(--foreground))] hover:text-[hsl(var(--primary))] transition flex items-center gap-1 px-4 py-2 text-lg rounded-full hover:bg-[hsl(var(--muted))] focus:outline-none"
+                      className="font-semibold text-[hsl(var(--foreground))] hover:text-[hsl(var(--primary))] transition-all flex items-center gap-2 px-4 py-2 text-lg rounded-xl hover:bg-[hsl(var(--muted))] focus:outline-none"
                       tabIndex={0}
                       onClick={() => {
                         if (openIndex === idx && openedByClick) {
@@ -150,11 +150,11 @@ export default function Header() {
                       }}
                     >
                       {item.label}
-                      <span className="text-xs">▼</span>
+                      <span className="text-xs transition-transform duration-200 group-hover:rotate-180">▼</span>
                     </button>
                     {/* Mega Menu for Why INFONOBLE */}
                     {item.isMega && openIndex === idx && Array.isArray(item.submenu) && typeof item.submenu[0] === 'object' && (
-                      <div className="absolute left-1/2 -translate-x-1/2 mt-4 min-w-[520px] rounded-2xl bg-white/90 backdrop-blur-xl shadow-2xl py-8 px-8 z-50 flex gap-6 border border-[hsl(var(--border))]">
+                      <div className="absolute left-1/2 -translate-x-1/2 mt-4 min-w-[520px] rounded-2xl bg-white/95 backdrop-blur-xl shadow-2xl py-8 px-8 z-50 flex gap-8 border border-[hsl(var(--border))] transition-all duration-200 animate-in fade-in-0 zoom-in-95">
                         {item.submenu.map((col, colIdx) => (
                           <div
                             key={colIdx}
@@ -207,7 +207,7 @@ export default function Header() {
                     )}
                     {/* Product Mega Menu */}
                     {item.isProductMega && openIndex === idx && Array.isArray(item.submenu) && (
-                      <div className="absolute left-1/2 -translate-x-1/2 mt-4 min-w-[480px] rounded-2xl bg-white/90 backdrop-blur-xl shadow-2xl py-8 px-8 z-50 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 border border-[hsl(var(--border))]">
+                      <div className="absolute left-1/2 -translate-x-1/2 mt-4 min-w-[520px] rounded-2xl bg-white/95 backdrop-blur-xl shadow-2xl py-8 px-8 z-50 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 border border-[hsl(var(--border))] transition-all duration-200 animate-in fade-in-0 zoom-in-95">
                         {item.submenu.map((prod, prodIdx) => {
                           const isActive =
                             typeof window !== "undefined" &&
@@ -236,7 +236,7 @@ export default function Header() {
                     )}
                     {/* Solutions Mega Menu */}
                     {item.isSolutionsMega && openIndex === idx && Array.isArray(item.submenu) && (
-                      <div className="absolute left-1/2 -translate-x-1/2 mt-4 min-w-[900px] rounded-2xl bg-white/90 backdrop-blur-xl shadow-2xl py-8 px-8 z-50 flex gap-12 border border-[hsl(var(--border))]">
+                      <div className="absolute left-1/2 -translate-x-1/2 mt-4 min-w-[900px] rounded-2xl bg-white/95 backdrop-blur-xl shadow-2xl py-8 px-8 z-50 flex gap-12 border border-[hsl(var(--border))] transition-all duration-200 animate-in fade-in-0 zoom-in-95">
                         {item.submenu.map((col, colIdx) => (
                           <div key={colIdx} className="min-w-[220px]">
                             <div className="text-lg font-bold bg-gradient-to-r from-orange-500 to-blue-500 bg-clip-text text-transparent mb-3">
@@ -291,7 +291,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href || "#"}
-                    className="font-semibold text-[hsl(var(--foreground))] hover:text-[hsl(var(--primary))] transition flex items-center gap-1 px-4 py-2 text-lg rounded-full hover:bg-[hsl(var(--muted))]"
+                    className="font-semibold text-[hsl(var(--foreground))] hover:text-[hsl(var(--primary))] transition-all flex items-center gap-1 px-4 py-2 text-lg rounded-xl hover:bg-[hsl(var(--muted))]"
                   >
                     {item.label}
                   </Link>
@@ -301,23 +301,22 @@ export default function Header() {
           </nav>
           {/* Hamburger Menu Icon for Mobile */}
           <button
-            className="lg:hidden ml-auto flex items-center justify-center p-2 rounded-full hover:bg-[hsl(var(--muted))] focus:outline-none"
+            className="lg:hidden ml-auto flex items-center justify-center p-2 rounded-xl hover:bg-[hsl(var(--muted))] focus:outline-none"
             onClick={() => setMobileMenuOpen(true)}
             aria-label="Open menu"
           >
             <Menu className="w-7 h-7 text-[hsl(var(--foreground))]" />
           </button>
           {/* Request a Demo Button (desktop only) */}
-          <div className="flex-shrink-0 ml-4 hidden lg:block">
+          <div className="flex-shrink-0 ml-6 hidden lg:block">
             <Link
               href="/get-demo"
-              className="px-6 py-2 rounded-full bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] font-bold shadow hover:scale-105 hover:bg-[hsl(var(--secondary))] transition-all border border-[hsl(var(--border))]"
+              className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-pink-500 text-white font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all border border-orange-200/20"
             >
               Request a Demo
             </Link>
           </div>
         </div>
-        {/* Mobile Menu Overlay (moved to MobileMenu component) */}
       </header>
       <MobileMenu open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} navItems={navItems} />
     </>
