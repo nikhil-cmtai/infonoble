@@ -59,13 +59,13 @@ export default function HeroSection() {
         {/* Left: Text Content */}
         <div className="flex-1 flex flex-col items-start justify-center gap-6 max-w-xl">
           <h1 className="text-5xl md:text-6xl font-bold text-[hsl(var(--foreground))] leading-tight">
-            Simply talk to <br /> your clients!
+            Connect Effortlessly <br /> with Your Customers
           </h1>
           <h2 className="text-lg font-semibold text-[hsl(var(--muted-foreground))]">
-            Leading cloud-based contact center software for enhanced customer engagement
+            Powerful cloud-based contact center software to elevate customer experiences
           </h2>
           <p className="text-base text-[hsl(var(--muted-foreground))] max-w-lg">
-            INFONOBLE is the leading Cloud Contact Center Solution in the GCC. We help successful companies to reach their customers from anywhere with a single interface that brings value in your conversations.
+            INFONOBLE leads the way in Cloud Contact Center Solutions across the GCC. Empower your team to reach customers anywhere, anytime, with a unified platform designed to maximize engagement and drive meaningful conversations.
           </p>
           <button
             className="mt-4 px-8 py-3 rounded-full bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] font-semibold shadow hover:bg-[hsl(var(--secondary))] transition-colors"
@@ -74,28 +74,29 @@ export default function HeroSection() {
           </button>
         </div>
 
-        {/* Right: Image/Visual Content */}
-        <div className="flex-1 flex items-center justify-center mt-12 md:mt-0">
-          <div className="relative flex items-center justify-center w-full h-full min-h-[320px] min-w-[220px]">
-            {/* Animated floating icons, now hugging the image closely */}
-            <div className="absolute inset-0 pointer-events-none z-20">
-              <span className="absolute top-[28%] left-[13%] icon-float1">
-                <Phone className="w-8 h-8 text-[hsl(var(--primary))] drop-shadow-lg" />
-              </span>
-              <span className="absolute top-[32%] right-[13%] icon-float2">
-                <MessageSquare className="w-8 h-8 text-orange-400 drop-shadow-lg" />
-              </span>
-              <span className="absolute bottom-[22%] left-[14%] icon-float3">
-                <Mic className="w-8 h-8 text-cyan-500 drop-shadow-lg" />
-              </span>
-              <span className="absolute bottom-[14%] right-[18%] icon-float4">
-                <Cloud className="w-8 h-8 text-purple-400 drop-shadow-lg" />
-              </span>
-            </div>
-                <Image src="/images/home.jpg" alt="Hero Image" width={600} height={600} className="object-contain" />
+
+      {/* Right: Image/Visual Content */}
+      <div className="flex-1 flex items-center justify-center mt-12 md:mt-0">
+        <div className="relative flex items-center justify-center w-full h-full min-h-[320px] min-w-[220px]">
+          {/* Animated floating icons, now hugging the image closely */}
+          <div className="absolute inset-0 pointer-events-none z-20">
+            <span className="absolute top-[28%] left-[13%] icon-float1">
+              <Phone className="w-8 h-8 text-[hsl(var(--primary))] drop-shadow-lg" />
+            </span>
+            <span className="absolute top-[32%] right-[13%] icon-float2">
+              <MessageSquare className="w-8 h-8 text-orange-400 drop-shadow-lg" />
+            </span>
+            <span className="absolute bottom-[22%] left-[14%] icon-float3">
+              <Mic className="w-8 h-8 text-cyan-500 drop-shadow-lg" />
+            </span>
+            <span className="absolute bottom-[14%] right-[18%] icon-float4">
+              <Cloud className="w-8 h-8 text-purple-400 drop-shadow-lg" />
+            </span>
           </div>
+          <Image src="/images/home.jpg" alt="Hero Image" width={600} height={600} className="object-contain" />
         </div>
       </div>
-    </section>
+    </div>
+    </section >
   );
 }

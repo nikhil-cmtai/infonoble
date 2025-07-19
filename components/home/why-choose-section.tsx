@@ -6,22 +6,22 @@ import { ThumbsUp, ShieldCheck, Zap } from 'lucide-react';
 const features = [
   {
     icon: <ThumbsUp className="w-8 h-8 text-orange-500 mb-2" />,
-    title: 'Customer Satisfaction',
-    desc: '98%+ CSAT scores from our clients across the GCC.'
+    title: 'Exceptional Customer Satisfaction',
+    desc: 'Consistently earning 98%+ CSAT from businesses across the GCC, we help you win customer loyalty.',
   },
   {
     icon: <ShieldCheck className="w-8 h-8 text-blue-500 mb-2" />,
-    title: 'Secure & Reliable',
-    desc: 'Enterprise-grade security and 99.99% uptime for your peace of mind.'
+    title: 'Robust Security & Reliability',
+    desc: 'Trust in enterprise-grade protection and 99.99% uptime—your data and calls are always safe and accessible.',
   },
   {
     icon: <Zap className="w-8 h-8 text-purple-500 mb-2" />,
-    title: 'Fast & Easy Setup',
-    desc: 'Get started in minutes with our intuitive, cloud-based platform.'
+    title: 'Seamless & Swift Onboarding',
+    desc: 'Launch your cloud contact center in minutes with our effortless, user-friendly setup—no IT headaches.',
   },
 ];
 
-export default function BannerSection() {
+export default function WhyChooseSection() {
   const [show, setShow] = useState([false, false, false]);
   useEffect(() => {
     features.forEach((_, i) => {

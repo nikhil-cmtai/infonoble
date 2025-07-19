@@ -14,41 +14,42 @@ import {
 
 const features = [
     {
-        title: 'Crystal Clear Quality Calls',
-        icon: <Phone className="w-6 h-6 text-[hsl(var(--primary))]" />,
-        desc: 'Experience HD voice quality and reliable connections for every customer conversation.'
+      title: 'Unmatched Call Clarity',
+      icon: <Phone className="w-6 h-6 text-[hsl(var(--primary))]" />,
+      desc: 'Deliver every conversation with crystal-clear HD audio for a premium customer experience.',
     },
     {
-        title: 'Streamline Your Communication',
-        icon: <MessageSquare className="w-6 h-6 text-[hsl(var(--secondary))]" />,
-        desc: 'Integrate all your channels—voice, chat, and more—into a single, seamless platform.'
+      title: 'Unified Communication Hub',
+      icon: <MessageSquare className="w-6 h-6 text-[hsl(var(--secondary))]" />,
+      desc: 'Manage voice, messaging, and more in one intuitive platform—no more channel switching.',
     },
     {
-        title: '15+ CRM Integrations',
-        icon: <Puzzle className="w-6 h-6 text-orange-400" />,
-        desc: 'Connect with your favorite CRMs and tools for a unified workflow.'
+      title: 'Seamless CRM Connections',
+      icon: <Puzzle className="w-6 h-6 text-orange-400" />,
+      desc: 'Integrate effortlessly with over 15 top CRM systems for a streamlined workflow.',
     },
     {
-        title: 'Automate with Workflows & Chatbots',
-        icon: <Rocket className="w-6 h-6 text-purple-400" />,
-        desc: 'Automate repetitive tasks and boost efficiency with smart workflows and chatbots.'
+      title: 'Effortless Automation',
+      icon: <Rocket className="w-6 h-6 text-purple-400" />,
+      desc: 'Simplify operations and boost productivity with smart automation and AI-powered chatbots.',
     },
-];
-
-const quickFeatures = [
+  ];
+  
+  const quickFeatures = [
     {
-        label: 'Cloud-based',
-        icon: <Cloud className="w-5 h-5 text-pink-500" />,
-    },
-    {
-        label: 'High-quality voice',
-        icon: <Mic className="w-5 h-5 text-pink-500" />,
+      label: '100% Cloud Hosted',
+      icon: <Cloud className="w-5 h-5 text-pink-500" />,
     },
     {
-        label: 'Deployed in minutes',
-        icon: <Rocket className="w-5 h-5 text-pink-500" />,
+      label: 'Superior Voice Quality',
+      icon: <Mic className="w-5 h-5 text-pink-500" />,
     },
-];
+    {
+      label: 'Rapid Deployment',
+      icon: <Rocket className="w-5 h-5 text-pink-500" />,
+    },
+  ];
+  
 
 const ImproveSection = () => {
     // By default, first item open
