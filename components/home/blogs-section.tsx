@@ -80,7 +80,7 @@ export default function BlogsSection() {
           ))}
         </div>
         <div className="flex justify-center mt-14">
-          <button className="px-8 py-3 rounded-full bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] font-semibold shadow hover:bg-[hsl(var(--secondary))] transition-colors">
+          <button className="px-8 py-3 rounded-full bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] font-semibold shadow hover:text-black transition-colors">
             View All Blogs
           </button>
         </div>
@@ -122,7 +122,7 @@ export default function BlogsSection() {
 function BlogCard({ blog, index }: { blog: Blog, index: number }) {
   return (
     <div
-      className="relative group bg-white/60 backdrop-blur-2xl rounded-2xl shadow-2xl overflow-hidden flex flex-col transition-all duration-300 border border-[hsl(var(--border))] animate-fade-up"
+      className="relative group bg-white/60 backdrop-blur-2xl rounded-2xl shadow-xl overflow-hidden flex flex-col transition-all duration-300 border border-[hsl(var(--border))] animate-fade-up"
       style={{ animationDelay: `${index * 80}ms`, animationFillMode: 'both' }}
       tabIndex={0}
       aria-label={blog.title}

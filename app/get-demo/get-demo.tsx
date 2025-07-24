@@ -108,7 +108,7 @@ export default function GetDemo() {
             />
             {/* Demo Request Form */}
             <section className="max-w-2xl mx-auto px-4 py-12">
-                <div className="bg-white/80 rounded-2xl shadow-xl border border-[hsl(var(--border))] p-8 flex flex-col gap-6">
+                <div className="bg-white/80 rounded-xl shadow-lg border border-[hsl(var(--border))] p-8 flex flex-col gap-6">
                     <h2 className="text-2xl font-bold text-[hsl(var(--primary))] mb-2">Request Your Free Demo</h2>
                     <form className="flex flex-col gap-5" onSubmit={handleSubmit} autoComplete="off">
                         <div className="flex flex-col md:flex-row gap-4">
@@ -155,7 +155,7 @@ export default function GetDemo() {
                         </div>
                         <Button
                             type="submit"
-                            className="mt-2 px-8 py-3 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white font-bold shadow hover:scale-105 transition-all text-lg flex items-center justify-center gap-2 disabled:opacity-60"
+                            className="mt-2 px-8 py-3 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white font-bold shadow transition-all text-lg flex items-center justify-center gap-2 disabled:opacity-60"
                             disabled={loading}
                         >
                             {loading ? <Loader2 className="animate-spin w-5 h-5" /> : <></>}
@@ -170,6 +170,7 @@ export default function GetDemo() {
                     </form>
                 </div>
             </section>
+            
             {/* Benefits Section */}
             <section className="max-w-5xl mx-auto px-4 py-12">
                 <h3 className="text-2xl md:text-3xl font-bold text-center mb-10 text-[hsl(var(--primary))]">Why Book a Demo?</h3>
@@ -183,6 +184,7 @@ export default function GetDemo() {
                     ))}
                 </div>
             </section>
+
             {/* FAQ Section */}
             <section className="max-w-3xl mx-auto px-4 py-12">
                 <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-[hsl(var(--primary))]">FAQs</h3>

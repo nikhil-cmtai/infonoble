@@ -15,7 +15,7 @@ export default function Contact() {
         <div className="max-w-3xl mx-auto px-4 relative z-10 p-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[hsl(var(--foreground))]">Get in touch</h1>
         </div>
-        <div className="bg-white/60 backdrop-blur-2xl rounded-3xl shadow-2xl border border-[hsl(var(--border))] p-8 md:p-16 flex flex-col md:flex-row gap-12">
+        <div className="bg-white/60 backdrop-blur-2xl rounded-xl shadow-lg border border-[hsl(var(--border))] p-8 md:p-16 flex flex-col md:flex-row gap-12">
           {/* Left: Details */}
           <div className="flex-1 flex flex-col gap-8 justify-center">
             <div className="flex items-center gap-4">
@@ -48,7 +48,7 @@ export default function Contact() {
             </div>
           </div>
           {/* Right: Form */}
-          <form className="flex-1 flex flex-col gap-6 bg-white/80 backdrop-blur-xl rounded-2xl shadow-lg p-8 border border-[hsl(var(--border))]">
+          <form className="flex-1 flex flex-col gap-6 bg-white/80 backdrop-blur-xl rounded-2xl shadow-md p-8 border border-[hsl(var(--border))]">
             <div className="flex flex-col md:flex-row gap-4">
               <input
                 type="text"
