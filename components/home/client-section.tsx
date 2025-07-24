@@ -47,7 +47,7 @@ const ClientSection = () => {
           <div className="marquee flex items-center gap-16">
             {[...clients, ...clients].map((client, i) => (
               <div key={i} className="flex-shrink-0 flex flex-col items-center justify-center group">
-                <div className="w-48 h-32 md:w-56 md:h-40 p-6 flex items-center justify-center bg-white/90 backdrop-blur-sm rounded-2xl border border-[hsl(var(--border))] shadow-sm transition-all duration-300 hover:shadow-xl hover:scale-105 hover:bg-white">
+                <div className="w-48 h-32 md:w-56 md:h-40 p-6 flex items-center justify-center bg-white/90 backdrop-blur-sm rounded-2xl border border-[hsl(var(--border))] shadow-sm transition-all duration-300 hover:shadow-md hover:bg-white">
                   <Image 
                     src={client.logo} 
                     alt={client.name} 

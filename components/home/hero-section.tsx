@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image';
-import { Phone, MessageSquare, Mic, Cloud } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -13,7 +12,7 @@ export default function HeroSection() {
         <div className="absolute left-[-20%] top-[-20%] w-[70vw] h-[70vw] bg-gradient-radial from-cyan-100 via-white/60 to-transparent opacity-70" />
         <div className="absolute right-[-15%] bottom-[-15%] w-[60vw] h-[60vw] bg-gradient-radial from-blue-100 via-white/60 to-transparent opacity-60" />
       </div>
-      {/* Animated Blobs
+      {/* Animated Blobs */}
       <div className="absolute z-0 top-[66px] left-[-120px] w-[340px] h-[340px] bg-[hsl(var(--primary))] opacity-30 rounded-full blur-3xl animate-blob1" />
       <div className="absolute z-0 bottom-[-100px] right-[-100px] w-[300px] h-[300px] bg-[hsl(var(--secondary))] opacity-30 rounded-full blur-3xl animate-blob2" />
       <div className="absolute z-0 top-1/2 left-[60%] w-[220px] h-[220px] bg-orange-300 opacity-20 rounded-full blur-2xl animate-blob3" />
@@ -53,7 +52,7 @@ export default function HeroSection() {
         .icon-float2 { animation: float2 4.2s ease-in-out infinite; }
         .icon-float3 { animation: float3 3.8s ease-in-out infinite; }
         .icon-float4 { animation: float4 4.5s ease-in-out infinite; }
-      `}</style> */}
+      `}</style>
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-6 md:px-8">
         {/* Left: Text Content */}
@@ -78,7 +77,7 @@ export default function HeroSection() {
         <div className="flex-1 flex items-center justify-center h-[420px] md:h-[560px]">
           <div className="relative flex items-center justify-center h-full max-w-[400px] md:max-w-[480px]">
             {/* Animated floating icons */}
-            <div className="absolute inset-0 pointer-events-none z-20">
+            {/* <div className="absolute inset-0 pointer-events-none z-20">
               <span className="absolute top-[25%] left-[10%] icon-float1">
                 <Phone className="w-8 h-8 text-[hsl(var(--primary))] drop-shadow-lg" />
               </span>
@@ -91,14 +90,14 @@ export default function HeroSection() {
               <span className="absolute bottom-[20%] right-[15%] icon-float4">
                 <Cloud className="w-8 h-8 text-purple-400 drop-shadow-lg" />
               </span>
-            </div>
-            <div className="h-full w-full flex items-center justify-center">
+            </div> */}
+            <div className="h-full w-full rounded-lg flex items-center justify-center">
               <Image 
                 src="/banner/infohome.gif" 
                 alt="Hero Image" 
                 width={440} 
                 height={460} 
-                className="object-contain max-h-[420px] md:max-h-[560px]"
+                className="object-contain max-h-[420px] md:max-h-[560px] rounded-lg"
                 priority 
               />
             </div>
